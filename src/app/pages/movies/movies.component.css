@@ -1,0 +1,23 @@
+body{
+    background-color: black;
+}
+.moviebox
+{
+    padding: 10px 5px;
+}
+.moviebox img{
+    width: 100;
+    height:180px;
+    padding: auto;
+    object-fit:cover;
+    border-radius:5px;
+
+}
+.moviebox h1
+{
+    font-size: 18px;
+    margin-top:10px;
+    font-weight: bold;
+}
+
+  

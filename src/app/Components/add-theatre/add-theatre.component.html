@@ -1,0 +1,47 @@
+<div class="card">
+    <h1>Add-Theatre</h1>
+
+  
+
+     <form class="row-g-3">
+        <div class="col-md-6">
+            <label>Theatre Name</label>
+            <input type="text" [(ngModel)]="thtname" [ngModelOptions]="{standalone: true}" class="form-control"
+                id="thtname" placeholder="Enter Name">
+        </div>
+
+        <div class="col-md-6">
+            <label>Location</label>
+            <input type="text" [(ngModel)]="location" [ngModelOptions]="{standalone: true}" class="form-control"
+                id="location" placeholder="Enter Name">
+        </div>
+
+        <button type="submit" class="btn btn-primary mt-4" (click)="save()">Save</button>
+    </form>
+</div>
+
+
+
+<div class="container mt-4">
+    <h1>Theatre Table</h1>
+    <h1 *ngIf="!isResultLoaded">Loading.................</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Theatre Name</th>
+                <th scope="col">Location </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let Theatreitem of TheatreArray">
+                <td>{{Theatreitem.id}}</td>
+                <td>{{Theatreitem.name}}</td>
+                <td>{{Theatreitem.location}}</td>
+                <td>
+                    <button type="button" class="btn btn-danger" (click)="setDelete(Theatreitem)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
